@@ -2,7 +2,12 @@
 
   * Ability to create new weber project with relative path;
   * Removed `use_ws` option from config.
- 
+  * Replaced `link` with `style` in resource helper.
+  * Added `image` resource helper.
+  * Sessions support.
+  * Added favicon.ico to the generated project.
+  * `link` helper renamed to `style`.
+
 #### Weber-0.0.2 [Released]
 
   * HTTPS support;

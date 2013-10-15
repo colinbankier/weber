@@ -13,7 +13,13 @@ defmodule Config do
     ws: 
       [ws_port: 8800,
        ws_mod: :Handler
-      ] 
+      ],
+    localization:
+      [default_locale: "en_US"
+      ],
+    session:
+      [max_age: 1440
+      ]
     ]
   end
 
