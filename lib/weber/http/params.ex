@@ -126,6 +126,18 @@ defmodule Weber.Http.Params do
   end
 
   @doc """
+    Get parameter value by key from the body.
+  """
+  def post_param(key) do
+    case :ets.lookup(:req_storage, self) do
+     [] -> nil
+     [{_, req}] ->
+       {_, params, _} = :cowboy_req.body_qs(req)
+       Dict.get params, key
+    end
+  end
+
+  @doc """
     Get parameter value by key from query string.
   """
   def param(key) do
